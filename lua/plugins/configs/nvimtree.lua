@@ -10,7 +10,7 @@ local options = {
   sync_root_with_cwd = true,
   update_focused_file = {
     enable = true,
-    update_root = false,
+    -- update_root = true,
   },
   view = {
     adaptive_size = false,
@@ -33,7 +33,7 @@ local options = {
   renderer = {
     root_folder_label = false,
     highlight_git = true,
-    highlight_opened_files = "none",
+    highlight_opened_files = "all",
 
     indent_markers = {
       enable = true,
@@ -61,11 +61,11 @@ local options = {
           arrow_closed = "",
         },
         git = {
-          unstaged = "✗",
+          unstaged = "󰬔",
           staged = "✓",
           unmerged = "",
           renamed = "➜",
-          untracked = "★",
+          untracked = "󰬕",
           deleted = "",
           ignored = "◌",
         },
@@ -82,5 +82,13 @@ local options = {
     }
   }
 }
+
+vim.cmd([[
+  :hi      NvimTreeGitNewIcon    guifg=NvimLightGreen  
+  :hi      NvimTreeGitNew    guifg=NvimLightGreen  
+  :hi      NvimTreeOpenedHL    gui=underline
+  :hi      NvimTreeGitFileDirtyHL    guifg=#fae3b0
+  :hi      NvimTreeGitDirtyIcon    guifg=#fae3b0
+]])
 
 return options
