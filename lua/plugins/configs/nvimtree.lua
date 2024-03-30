@@ -65,8 +65,8 @@ local options = {
           staged = "󰬚",
           unmerged = "",
           renamed = "➜",
-          untracked = "󰬙",
-          deleted = "",
+          untracked = "󰬕",
+          deleted = "󰬋",
           ignored = "◌",
         },
       },
@@ -91,9 +91,6 @@ vim.cmd([[
   :hi      NvimTreeGitDirtyIcon    guifg=#fae3b0
   :hi      NvimTreeGitFileStagedHL    guifg=NvimLightGreen
   :hi      NvimTreeGitStagedIcon    guifg=NvimLightGreen
-  :hi      NvimTreeGitRenamedIcon    guifg=#f38ba8
-  :hi      NvimTreeGitFileRenamedHL    guifg=#f38ba8
-  :hi      NvimTreeGitFolderRenamedHL    guifg=#f38ba8
 ]])
 
 return options
