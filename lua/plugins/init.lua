@@ -16,15 +16,14 @@ local default_plugins = {
     "NvChad/ui",
     branch = "v2.0",
     lazy = false,
-    --     dependencies = {
---       "abeldekat/harpoonline",
---       config = function()
---         require("harpoonline").setup {
---           on_update = function() vim.cmd.redrawstatus() end,
---         }
---       end,
---     },
-
+    dependencies = {
+      "abeldekat/harpoonline",
+      config = function()
+        require("harpoonline").setup {
+          on_update = function() vim.cmd.redrawstatus() end,
+        }
+      end,
+    },
   },
 
   {
