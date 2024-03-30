@@ -7,7 +7,7 @@ local opts = {
     null_ls.builtins.formatting.goimports_reviser,
   },
   on_attach = function (client, bufnr)
-    -- if client.supports_method("textDocument/formatting") then
+    if client.supports_method("textDocument/formatting") then
       vim.api.nvim_clear_autocmds({
         group = augroup,
         buffer = bufnr,
@@ -19,7 +19,7 @@ local opts = {
           vim.lsp.buf.format({bufnr = bufnr})
         end,
       })
-    -- end
+    end
   end,
 }
 return opts

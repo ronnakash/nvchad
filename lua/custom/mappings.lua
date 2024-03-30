@@ -1,4 +1,19 @@
 local M = {}
+-- local harpoon = require "harpoon"
+
+-- local harpoonMappings = require "custom.configs.harpoon"
+
+-- M.harpoon = {
+--   plugin = true,
+--   n = {
+--     ["<leader>a"] = {
+--       function() harpoon:list():append() end,
+--       "placeholer"
+--     }
+--   }
+-- }
+
+-- M.harpoon = harpoonMappings.mappings
 
 M.golang = {
   n = {
@@ -20,7 +35,6 @@ M.golang = {
     },
   },
 }
-
 M.gopher = {
   plugin = true,
   n = {
