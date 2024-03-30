@@ -62,7 +62,7 @@ local options = {
         },
         git = {
           unstaged = "󰬔",
-          staged = "✓",
+          staged = "󰬚",
           unmerged = "",
           renamed = "➜",
           untracked = "󰬕",
@@ -89,6 +89,8 @@ vim.cmd([[
   :hi      NvimTreeOpenedHL    gui=underline
   :hi      NvimTreeGitFileDirtyHL    guifg=#fae3b0
   :hi      NvimTreeGitDirtyIcon    guifg=#fae3b0
+  :hi      NvimTreeGitFileStagedHL    guifg=NvimLightGreen
+  :hi      NvimTreeGitStagedIcon    guifg=NvimLightGreen
 ]])
 
 return options
