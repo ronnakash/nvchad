@@ -43,6 +43,16 @@ M.gopher = {
 
 M.trouble = require("custom.configs.trouble").mappings
 
+M.telescope = {
+  plugin = true,
+  n = {
+    ["<leader>fi"] = {
+      "<cmd> InspectTree <CR>",
+      "InspectTree"
+    },
+  },
+}
+
 M.goto_preview = {
   -- plugin = true,
   n = {
@@ -73,5 +83,15 @@ M.goto_preview = {
   }
 }
 
+vim.api.nvim_set_keymap('n', '<F5>', ':UndotreeToggle <CR>', { noremap = true, silent = true, desc = "toggle undotree"})
+M.undotree = {
+  plugin = true,
+  n = {
+    ["<F5>"] = {
+      "<cmd> UndotreeToggle <CR>",
+      "toggle undotree"
+    },
+  }
+}
 
 return M

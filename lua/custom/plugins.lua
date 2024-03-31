@@ -94,6 +94,10 @@ local plugins = {
     end,
     opts = {},
   },
+  {
+    "mbbill/undotree",
+    lazy = false,
+  },
 }
 
 return plugins
