@@ -1,9 +1,7 @@
 -- n, v, i, t = mode names
-local harpoon = require("custom.configs.harpoon")
 
 local M = {}
 
-M.harpoon = harpoon.getKeymaps()
 
 M.general = {
   i = {

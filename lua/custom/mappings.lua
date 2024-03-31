@@ -1,19 +1,6 @@
 local M = {}
--- local harpoon = require "harpoon"
 
--- local harpoonMappings = require "custom.configs.harpoon"
-
--- M.harpoon = {
---   plugin = true,
---   n = {
---     ["<leader>a"] = {
---       function() harpoon:list():append() end,
---       "placeholer"
---     }
---   }
--- }
-
--- M.harpoon = harpoonMappings.mappings
+M.harpoon = require("custom.configs.harpoon").getKeymaps()
 
 M.golang = {
   n = {

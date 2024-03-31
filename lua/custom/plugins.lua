@@ -45,12 +45,6 @@ local plugins = {
     event = "VeryLazy",
     config = harpoon_confing.setup
   },
-    {
-    "abeldekat/harpoonline",
-    lazy = true,
-    -- config = function()
-    -- end,
-  },
   {
     "rmagatti/auto-session",
     lazy = false,
