@@ -62,7 +62,6 @@ local plugins = {
   },
   {
     "folke/trouble.nvim",
-    -- dependencies = { "nvim-tree/nvim-web-devicons" },
     lazy = false,
     opts = function ()
       return require("custom.configs.trouble").opts
@@ -70,11 +69,6 @@ local plugins = {
   },
   {
     "ray-x/go.nvim",
-    -- dependencies = {  -- optional packages
-    --   "ray-x/guihua.lua",
-    --   "neovim/nvim-lspconfig",
-    --   "nvim-treesitter/nvim-treesitter",
-    -- },
     config = function()
       require("go").setup()
     end,
@@ -85,12 +79,20 @@ local plugins = {
   {
     "folke/todo-comments.nvim",
     lazy = false,
-    -- dependencies = { "nvim-lua/plenary.nvim" },
     opts = {
-      -- your configuration comes here
-      -- or leave it empty to use the default settings
-      -- refer to the configuration section below
     },
+  },
+  {
+    "rcarriga/nvim-notify",
+    lazy = false,
+    config = function ()
+      local notify = require("notify")
+      notify.setup({
+        background_colour = "#000000",
+      })
+      vim.notify = notify
+    end,
+    opts = {},
   },
 }
 

@@ -91,6 +91,7 @@ vim.cmd([[
   :hi      NvimTreeGitDirtyIcon    guifg=#fae3b0
   :hi      NvimTreeGitFileStagedHL    guifg=NvimLightGreen
   :hi      NvimTreeGitStagedIcon    guifg=NvimLightGreen
+  :hi      NvimTreeGitStagedIcon    guifg=NvimLightGreen
 ]])
 
 return options
