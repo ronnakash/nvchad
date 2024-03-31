@@ -31,18 +31,18 @@ M.setup = function ()
     end
 
   -- define keymaps
-    vim.keymap.set("n", "<leader>a", function() harpoon:list():append() end)
+    vim.keymap.set("n", "<leader>a", function() harpoon:list():append() end, {desc = "harpoon append"})
 
-    vim.keymap.set("n", "<a-e>", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
-    vim.keymap.set("n", "<C-e>", function() M.toggle_telescope(harpoon:list()) end)
+    vim.keymap.set("n", "<a-e>", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, {desc = "harpoon telescope menu"})
+    vim.keymap.set("n", "<C-e>", function() M.toggle_telescope(harpoon:list()) end, {desc = "harpoon quick menu"})
 
-    vim.keymap.set("n", "<a-1>", function() harpoon:list():select(1) end)
-    vim.keymap.set("n", "<a-2>", function() harpoon:list():select(2) end)
-    vim.keymap.set("n", "<a-3>", function() harpoon:list():select(3) end)
-    vim.keymap.set("n", "<a-4>", function() harpoon:list():select(4) end)
+    vim.keymap.set("n", "<a-1>", function() harpoon:list():select(1) end, {desc = "harpoon select 1"})
+    vim.keymap.set("n", "<a-2>", function() harpoon:list():select(2) end, {desc = "harpoon select 2"})
+    vim.keymap.set("n", "<a-3>", function() harpoon:list():select(3) end, {desc = "harpoon select 3"})
+    vim.keymap.set("n", "<a-4>", function() harpoon:list():select(4) end, {desc = "harpoon select 4"})
 
-    vim.keymap.set("n", "<a-9>", function() harpoon:list():prev() end)
-    vim.keymap.set("n", "<a-0>", function() harpoon:list():next() end)
+    vim.keymap.set("n", "<a-9>", function() harpoon:list():prev() end, {desc = "harpoon prev"})
+    vim.keymap.set("n", "<a-0>", function() harpoon:list():next() end, {desc = "harpoon next"})
 end
 
 
@@ -51,7 +51,7 @@ M.getKeymaps = function ()
   return {
     plugin = true,
     n = {
-      ["<leader>a"] = { function() M.harpoon:list():append() end, "append"},
+      ["<leader>a"] = { function() M.harpoon:list():append() end, "append harpoon list"},
       ["<C-e>"] = { function() M.harpoon.ui:toggle_quick_menu(M.harpoon:list()) end, "toggle harpoon telescope menu" },
       ["<a-e>"] = { function() M.toggle_telescope(M.harpoon:list()) end, "toggle harpoon quick menu" },
       ["<a-1>"] = { function() M.harpoon:list():select(1) end, "select 1" },
