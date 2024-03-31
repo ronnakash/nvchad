@@ -26,6 +26,10 @@ M.golang = {
 M.gopher = {
   plugin = true,
   n = {
+    ["<leader>gfs"] = {
+      "<cmd> GoFillStruct <CR>",
+      "Fill go struct",
+    },
     ["<leader>gsj"] = {
       "<cmd> GoTagAdd json <CR>",
       "Add json struct tags",
@@ -37,7 +41,37 @@ M.gopher = {
   }
 }
 
+M.trouble = require("custom.configs.trouble").mappings
 
--- M.trouble = 
+M.goto_preview = {
+  -- plugin = true,
+  n = {
+    ["gpd"] = {
+      "<cmd> lua require('goto-preview').goto_preview_definition() <CR>",
+      "definition popup",
+    },
+    ["gpt"] = {
+      "<cmd>lua require('goto-preview').goto_preview_type_definition()<CR>",
+      "type definition popup",
+    },
+    ["gpi"] = {
+      "<cmd>lua require('goto-preview').goto_preview_implementation()<CR>",
+      "implementation popup",
+    },
+    ["gpD"] = {
+      "<cmd>lua require('goto-preview').goto_preview_declaration()<CR>",
+      "declaration popup",
+    },
+    ["gP"] = {
+      "<cmd>lua require('goto-preview').close_all_win()<CR>",
+      "close all windows",
+    },
+    ["gpr"] = {
+      "<cmd>lua require('goto-preview').goto_preview_references()<CR>",
+      "references popup",
+    },
+  }
+}
+
 
 return M

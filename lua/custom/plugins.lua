@@ -45,6 +45,12 @@ local plugins = {
     config = require("custom.configs.harpoon").setup,
   },
   {
+    'rmagatti/goto-preview',
+    config = function()
+      require('goto-preview').setup({})
+    end
+  },
+  {
     "rmagatti/auto-session",
     lazy = false,
     config = function ()
@@ -62,6 +68,21 @@ local plugins = {
       return require("custom.configs.trouble").opts
     end,
   },
+  {
+    "ray-x/go.nvim",
+    -- dependencies = {  -- optional packages
+    --   "ray-x/guihua.lua",
+    --   "neovim/nvim-lspconfig",
+    --   "nvim-treesitter/nvim-treesitter",
+    -- },
+    config = function()
+      require("go").setup()
+    end,
+    event = {"CmdlineEnter"},
+    ft = {"go", 'gomod'},
+    build = ':lua require("go.install").update_all_sync()' -- if you need to install/update all binaries
+  },
+
 }
 
 return plugins
