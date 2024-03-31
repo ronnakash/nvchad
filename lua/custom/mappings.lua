@@ -36,16 +36,6 @@ M.gopher = {
   }
 }
 
-vim.keymap.set("n", "<a-t>", "<cmd> TroubleToggle<CR>", {desc = "trouble toggle"})
 
-M.trouble = {
-  plugin = true,
-  n = {
-    ["<a-t>"] = {
-      "<cmd> TroubleToggle <CR>",
-      "trouble bottom menu"
-    }
-  }
-}
-
+-- M.trouble = 
 return M
