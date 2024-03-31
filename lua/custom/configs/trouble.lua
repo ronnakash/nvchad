@@ -18,12 +18,12 @@ M.opts = {
   use_diagnostic_signs = true, -- enabling this will use the signs defined in your lsp client
 }
 
-vim.keymap.set("n", "<C-t>", "<cmd> TroubleToggle workspace_diagnostics <CR>", {desc = "trouble toggle"})
+vim.keymap.set("n", "<a-t>", "<cmd> TroubleToggle workspace_diagnostics <CR>", {desc = "trouble toggle"})
 
 M.mappings = {
   plugin = true,
   n = {
-    ["<C-t>"] = {
+    ["<a-t>"] = {
       "<cmd> TroubleToggle workspace_diagnostics <CR>",
       "trouble bottom menu"
     },

@@ -101,6 +101,26 @@ M.tabufline = {
       end,
       "Close buffer",
     },
+
+    -- custom
+
+    -- cycle through tabs
+    ["<leader>tn"] = {
+      "<cmd> tabnext <CR>",
+      "Goto next tab",
+    },
+    ["<leader>tN"] = {
+      "<cmd> tabprevious <CR>",
+      "Goto prev tab",
+    },
+    ["<leader>ta"] = {
+      "<cmd> tabnew <CR>",
+      "new tab",
+    },
+    ["<leader>tx"] = {
+      "<cmd> tabclose <CR>",
+      "close tab",
+    },
   },
 }
 

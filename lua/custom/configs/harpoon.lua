@@ -43,6 +43,13 @@ M.setup = function ()
 
     vim.keymap.set("n", "<a-9>", function() harpoon:list():prev() end, {desc = "harpoon prev"})
     vim.keymap.set("n", "<a-0>", function() harpoon:list():next() end, {desc = "harpoon next"})
+
+  -- tabufline TODO: move to somewhere appropriate
+    vim.keymap.set("n", "<leader>tn", "<cmd>tabnext<CR>", {desc = "Goto next tab"})
+    vim.keymap.set("n", "<leader>tN", "<cmd>tabprev<CR>", {desc = "Goto prev tab"})
+    vim.keymap.set("n", "<leader>ta", "<cmd>tabnew<CR>", {desc = "new tab"})
+    vim.keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", {desc = "close tab"})
+
 end
 
 
