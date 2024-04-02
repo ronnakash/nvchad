@@ -11,7 +11,8 @@ local plugins = {
     opts = {
       ensure_installed = {
         "rust-analyzer",
-        "gopls"
+        "gopls",
+        "hclfmt"
       },
     },
   },
@@ -46,6 +47,7 @@ local plugins = {
   },
   {
     'rmagatti/goto-preview',
+    -- lazy = false,
     config = function()
       require('goto-preview').setup({})
     end
@@ -74,7 +76,7 @@ local plugins = {
     end,
     event = {"CmdlineEnter"},
     ft = {"go", 'gomod'},
-    build = ':lua require("go.install").update_all_sync()' -- if you need to install/update all binaries
+    build = ':lua require("go.install").update_all_sync()'
   },
   {
     "folke/todo-comments.nvim",
@@ -88,6 +90,7 @@ local plugins = {
     config = function ()
       local notify = require("notify")
       notify.setup({
+        -- transparent bg
         background_colour = "#000000",
       })
       vim.notify = notify
@@ -97,6 +100,11 @@ local plugins = {
   {
     "mbbill/undotree",
     lazy = false,
+  },
+  {
+    -- TODO: figure out how to use it
+    "tpope/vim-fugitive",
+    -- lazy = false,
   },
 }
 

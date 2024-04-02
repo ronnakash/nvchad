@@ -24,9 +24,9 @@ M.golang = {
 }
 
 M.gopher = {
-  plugin = true,
+  -- plugin = true,
   n = {
-    ["<leader>gfs"] = {
+    ["<leader>gsf"] = {
       "<cmd> GoFillStruct <CR>",
       "Fill go struct",
     },
@@ -37,6 +37,10 @@ M.gopher = {
     ["<leader>gsy"] = {
       "<cmd> GoTagAdd yaml <CR>",
       "Add json struct tags",
+    },
+    ["<leader>gor"] = {
+      "<cmd> GoRename <CR>",
+      "Rename go element",
     },
   }
 }
