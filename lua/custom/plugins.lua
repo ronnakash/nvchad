@@ -106,6 +106,12 @@ local plugins = {
     "tpope/vim-fugitive",
     -- lazy = false,
   },
+  {
+    -- TODO: https://www.youtube.com/watch?v=C7juSZsM2Fg
+    "mfussenegger/nvim-jdtls",
+    lazy = false,
+    -- config = require("custom.configs.nvim-jdtls").config
+  },
 }
 
 return plugins
