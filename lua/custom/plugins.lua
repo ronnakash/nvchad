@@ -12,7 +12,10 @@ local plugins = {
       ensure_installed = {
         "rust-analyzer",
         "gopls",
-        "hclfmt"
+        "hclfmt",
+        "jdtls",
+        "typescript-language-server",
+        "eslint-lsp"
       },
     },
   },
@@ -112,6 +115,12 @@ local plugins = {
     lazy = false,
     -- config = require("custom.configs.nvim-jdtls").config
   },
+  {
+    "mfussenegger/nvim-lint",
+    event = "VeryLazy",
+    config = function ()
+      require("custom.configs.nvim-lint")
+    end  },
 }
 
 return plugins
