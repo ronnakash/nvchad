@@ -15,7 +15,8 @@ local plugins = {
         "hclfmt",
         "jdtls",
         "typescript-language-server",
-        "eslint-lsp"
+        "eslint-lsp",
+        "html"
       },
     },
   },
@@ -124,15 +125,6 @@ local plugins = {
     lazy = false,
     -- config = require("custom.configs.nvim-jdtls").config
   },
-  -- TODO: fix eslint, prettier
-  -- TODO: https://www.youtube.com/watch?v=CVCBHHFXWNE
-  -- {
-  --   "mfussenegger/nvim-lint",
-  --   event = "VeryLazy",
-  --   config = function ()
-  --     require("custom.configs.nvim-lint")
-  --   end
-  -- }
 }
 
 return plugins
