@@ -23,19 +23,28 @@ local plugins = {
     "olexsmir/gopher.nvim",
     ft = "go",
     config = function (_, opts)
+      local current_file = vim.fn.expand('%:p') -- Get current buffer's full path
+      local module_root = vim.fn.systemlist('go list -m -f {{.Dir}}') -- Get module root directory
+
+      if #module_root > 0 then
+        opts.root_dir = module_root[1]
+      else
+        opts.root_dir = vim.fn.fnamemodify(current_file, ':h')
+      end
+
       require("gopher").setup(opts)
     end,
     build = function ()
       vim.cmd [[silent! GoInstallDeps]]
     end
   },
-  {
-    "jose-elias-alvarez/null-ls.nvim",
-    ft = "go",
-    opts = function ()
-      return require "custom.configs.null-ls"
-    end
-  },
+  -- {
+  --   "jose-elias-alvarez/null-ls.nvim",
+  --   ft = "go",
+  --   opts = function ()
+  --     return require "custom.configs.null-ls"
+  --   end
+  -- },
   {
     "okuuva/auto-save.nvim",
     cmd = "ASToggle", -- optional for lazy loading on command
@@ -115,6 +124,8 @@ local plugins = {
     lazy = false,
     -- config = require("custom.configs.nvim-jdtls").config
   },
+  -- TODO: fix eslint, prettier
+  -- TODO: https://www.youtube.com/watch?v=CVCBHHFXWNE
   -- {
   --   "mfussenegger/nvim-lint",
   --   event = "VeryLazy",

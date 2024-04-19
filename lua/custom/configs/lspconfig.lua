@@ -3,7 +3,7 @@ local capabilities = require("plugins.configs.lspconfig").capabilities
 
 local lspconfig = require "lspconfig"
 
--- local configs = require 'lspconfig/configs'
+local configs = require 'lspconfig/configs'
 
 lspconfig.rust_analyzer.setup({
   on_attach = on_attach,
@@ -38,4 +38,29 @@ lspconfig.tsserver.setup({
   },
   root_dir = lspconfig.util.root_pattern(".git"),
 })
+
+if not configs.golangcilsp then
+ 	configs.golangcilsp = {
+		default_config = {
+			cmd = {'golangci-lint-langserver'},
+			-- root_dir = lspconfig.util.root_pattern('.git', 'go.mod'),
+			-- root_dir = lspconfig.util.root_pattern('go.mod'),
+			init_options = {
+					command = { "golangci-lint", "run", "--enable-all", "--disable", "lll", "--out-format", "json", "--issues-exit-code=1" };
+			}
+		};
+	}
+end
+
+lspconfig.golangci_lint_ls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  cmd = {'golangci-lint-langserver'},
+	filetypes = {'go','gomod'},
+  root_dir = lspconfig.util.root_pattern('go.mod'),
+	-- root_dir = lspconfig.util.root_pattern('.git', 'go.mod'),
+  -- init_options = {
+  --     command = { "golangci-lint", "run", "--enable-all", "--disable", "lll", "--out-format", "json", "--issues-exit-code=1" };
+  -- }
+}
 
