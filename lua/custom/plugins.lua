@@ -16,7 +16,10 @@ local plugins = {
         "jdtls",
         "typescript-language-server",
         "eslint-lsp",
-        "html"
+        "eslint-lsp",
+        "golangci-lint",
+        "html-lsp",
+        "jdtls",
       },
     },
   },
