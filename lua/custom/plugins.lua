@@ -38,13 +38,13 @@ local plugins = {
       vim.cmd [[silent! GoInstallDeps]]
     end
   },
-  -- {
-  --   "jose-elias-alvarez/null-ls.nvim",
-  --   ft = "go",
-  --   opts = function ()
-  --     return require "custom.configs.null-ls"
-  --   end
-  -- },
+  {
+    "jose-elias-alvarez/null-ls.nvim",
+    ft = "go",
+    opts = function ()
+      return require "custom.configs.null-ls"
+    end
+  },
   {
     "okuuva/auto-save.nvim",
     cmd = "ASToggle", -- optional for lazy loading on command
