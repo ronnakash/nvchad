@@ -18,7 +18,7 @@ local plugins = {
         "eslint-lsp",
         "eslint-lsp",
         "golangci-lint",
-        "html-lsp",
+        -- "html-lsp",
         "jdtls",
       },
     },
@@ -128,6 +128,8 @@ local plugins = {
     lazy = false,
     -- config = require("custom.configs.nvim-jdtls").config
   },
+  -- TODO: https://www.reddit.com/r/golang/comments/ng828k/templ_a_new_templating_language_for_go_with/
+  -- TODO: https://www.reddit.com/r/neovim/comments/14d97nz/adding_go_html_template_highlight_in_lazyvim/
 }
 
 return plugins

@@ -16,7 +16,8 @@ lspconfig.gopls.setup({
   on_attach = on_attach,
   capabilities = capabilities,
   cmd = { "gopls" },
-  filetypes = { "go", "gomod", "gowork", "gotmpl" },
+  -- filetypes = { "go", "gomod", "gowork", "gotmpl" },
+  filetypes = { "go", "gomod", "gowork" },
   root_dir = lspconfig.util.root_pattern("go.work", "go.mod", ".git"),
 })
 
@@ -61,7 +62,6 @@ lspconfig.golangci_lint_ls.setup {
 lspconfig.html.setup {
   on_attach = on_attach,
   capabilities = capabilities,
-  -- cmd = {'golangci-lint-langserver'},
 	filetypes = {'html'},
   root_dir = lspconfig.util.root_pattern('.git'),
 }
