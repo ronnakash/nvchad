@@ -115,12 +115,13 @@ local plugins = {
     lazy = false,
     -- config = require("custom.configs.nvim-jdtls").config
   },
-  {
-    "mfussenegger/nvim-lint",
-    event = "VeryLazy",
-    config = function ()
-      require("custom.configs.nvim-lint")
-    end  },
+  -- {
+  --   "mfussenegger/nvim-lint",
+  --   event = "VeryLazy",
+  --   config = function ()
+  --     require("custom.configs.nvim-lint")
+  --   end
+  -- }
 }
 
 return plugins
