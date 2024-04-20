@@ -302,8 +302,12 @@ M.telescope = {
     ["<leader>fn"] = { "<cmd> Telescope notify <CR>", "Notification history" },
 
     -- git
-    ["<leader>cm"] = { "<cmd> Telescope git_commits <CR>", "Git commits" },
-    ["<leader>gt"] = { "<cmd> Telescope git_status <CR>", "Git status" },
+    ["<leader>gc"] = { "<cmd> Telescope git_commits <CR>", "Git commits" },
+    ["<leader>gf"] = { "<cmd> Telescope git_bcommits <CR>", "Git file changes" },
+    ["<leader>gr"] = { "<cmd> Telescope git_branches <CR>", "Git branches" },
+    ["<leader>gs"] = { "<cmd> Telescope git_status <CR>", "Git status" },
+    ["<leader>gh"] = { "<cmd> Telescope git_stash <CR>", "Git stash" },
+    ["<leader>gd"] = { "<cmd> Gvdiffsplit <CR>", "Git diff" },
 
     -- pick a hidden term
     ["<leader>pt"] = { "<cmd> Telescope terms <CR>", "Pick hidden term" },

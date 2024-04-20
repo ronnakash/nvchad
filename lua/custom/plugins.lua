@@ -116,9 +116,8 @@ local plugins = {
     lazy = false,
   },
   {
-    -- TODO: figure out how to use it
     "tpope/vim-fugitive",
-    -- lazy = false,
+    lazy = false,
   },
   {
     -- TODO: https://www.youtube.com/watch?v=C7juSZsM2Fg

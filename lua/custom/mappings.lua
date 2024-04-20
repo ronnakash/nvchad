@@ -4,37 +4,31 @@ M.harpoon = require("custom.configs.harpoon").getKeymaps()
 
 M.golang = {
   n = {
-    ["<leader>geds"] = {
+    ["<leader>goeds"] = {
       [[0WWveyoif <esc>pa != nil {<CR><Tab>return fmt.Errorf("placeholder: %w", <esc>pa)<CR>}<esc>kf"lves]],
       "if-err with fmt.Errorf for two terms, single return value"
     },
-    ["<leader>gedd"] = {
+    ["<leader>goedd"] = {
       [[0WWveyoif <esc>pa != nil {<CR><Tab>return nil, fmt.Errorf("placeholder: %w", <esc>pa)<CR>}<esc>kf"lves]],
       "if-err with fmt.Errorf for two terms, double return value"
     },
-    ["<leader>gess"] = {
+    ["<leader>goess"] = {
       [[0wv$hdOif <esc>p0wwveyA; <esc>pa != nil {<CR>}<esc>k0f;wvep<esc>oreturn fmt.Errorf("placeholder: %w", <esc>pa)<esc>0f"lves]],
       "if-err with fmt.Errorf for one term, single return value"
     },
-    ["<leader>gesd"] = {
+    ["<leader>goesd"] = {
       [[0wv$hdOif <esc>p0wwveyA; <esc>pa != nil {<CR>}<esc>k0f;wvep<esc>oreturn nil, fmt.Errorf("placeholder: %w", <esc>pa)<esc>0f"lves]],
       "if-err with fmt.Errorf for one term, double return value"
     },
-  },
-}
-
-M.gopher = {
-  -- plugin = true,
-  n = {
-    ["<leader>gsf"] = {
+    ["<leader>gosf"] = {
       "<cmd> GoFillStruct <CR>",
       "Fill go struct",
     },
-    ["<leader>gsj"] = {
+    ["<leader>gosj"] = {
       "<cmd> GoTagAdd json <CR>",
       "Add json struct tags",
     },
-    ["<leader>gsy"] = {
+    ["<leader>gosy"] = {
       "<cmd> GoTagAdd yaml <CR>",
       "Add json struct tags",
     },
@@ -42,7 +36,7 @@ M.gopher = {
       "<cmd> GoRename <CR>",
       "Rename go element",
     },
-  }
+  },
 }
 
 M.trouble = require("custom.configs.trouble").mappings
