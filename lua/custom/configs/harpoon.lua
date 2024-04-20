@@ -31,7 +31,7 @@ M.setup = function ()
     end
 
   -- define keymaps
-    vim.keymap.set("n", "<leader>a", function() harpoon:list():append() end, {desc = "harpoon append"})
+    vim.keymap.set("n", "<leader>a", function() harpoon:list():add() end, {desc = "harpoon append"})
 
     vim.keymap.set("n", "<a-e>", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, {desc = "harpoon telescope menu"})
     vim.keymap.set("n", "<C-e>", function() M.toggle_telescope(harpoon:list()) end, {desc = "harpoon quick menu"})
