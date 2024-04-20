@@ -307,7 +307,6 @@ M.telescope = {
     ["<leader>gr"] = { "<cmd> Telescope git_branches <CR>", "Git branches" },
     ["<leader>gs"] = { "<cmd> Telescope git_status <CR>", "Git status" },
     ["<leader>gh"] = { "<cmd> Telescope git_stash <CR>", "Git stash" },
-    ["<leader>gd"] = { "<cmd> Gvdiffsplit <CR>", "Git diff" },
 
     -- pick a hidden term
     ["<leader>pt"] = { "<cmd> Telescope terms <CR>", "Pick hidden term" },
@@ -489,6 +488,8 @@ M.gitsigns = {
       end,
       "Toggle deleted",
     },
+    ["<leader>gd"] = { "<cmd> Gvdiffsplit <CR>", "Git diff" },
+    ["<leader>gg"] = { "<cmd> Git <CR>", "Git" },
   },
 }
 
