@@ -475,6 +475,13 @@ M.gitsigns = {
       "Preview hunk",
     },
 
+    ["<leader>pi"] = {
+      function()
+        require("gitsigns").preview_hunk_inline()
+      end,
+      "Preview hunk inline",
+    },
+
     ["<leader>gb"] = {
       function()
         package.loaded.gitsigns.blame_line()
