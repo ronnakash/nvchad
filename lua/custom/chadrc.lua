@@ -9,11 +9,13 @@ M.ui = {
     -- show_numbers = true,
   },
   statusline = {
-    theme = "vscode_colored",
+    -- theme = "vscode_colored",
     separator_style = "default",
     lspprogress_len = 1000,
+    bg = '#FFFFFF', -- Set the background color here, for example, black
   },
 }
 M.plugins = "custom.plugins"
 M.mappings = require "custom.mappings"
+
 return M
