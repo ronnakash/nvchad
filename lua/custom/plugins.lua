@@ -42,7 +42,8 @@ local plugins = {
   },
   {
     "jose-elias-alvarez/null-ls.nvim",
-    ft = "go",
+    -- TODO: might need to use javascript, typescript
+    ft = {"go", "js", "ts"},
     opts = function ()
       return require "custom.configs.null-ls"
     end
