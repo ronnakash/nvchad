@@ -13,11 +13,12 @@ local plugins = {
         "rust-analyzer",
         "gopls",
         "hclfmt",
-        "jdtls",
-        "typescript-language-server",
-        "eslint-lsp",
         "golangci-lint",
-        "jdtls",
+        -- python
+        "pyright",
+        "ruff",
+        "mypy",
+        "black",
       },
     },
   },
@@ -42,7 +43,7 @@ local plugins = {
   },
   {
     "jose-elias-alvarez/null-ls.nvim",
-    ft = "go",
+    ft = {"go", "python"},
     opts = function ()
       return require "custom.configs.null-ls"
     end
@@ -141,8 +142,7 @@ local plugins = {
       { "<c-l>", "<cmd><C-U>TmuxNavigateRight<cr>" },
       { "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
     },
-  }
-
+  },
 
   -- TODO: https://www.reddit.com/r/golang/comments/ng828k/templ_a_new_templating_language_for_go_with/
   -- TODO: https://www.reddit.com/r/neovim/comments/14d97nz/adding_go_html_template_highlight_in_lazyvim/

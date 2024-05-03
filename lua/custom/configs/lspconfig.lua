@@ -20,25 +20,6 @@ lspconfig.gopls.setup({
   root_dir = lspconfig.util.root_pattern("go.work", "go.mod", ".git"),
 })
 
-lspconfig.jdtls.setup({
-  cmd = { vim.fn.expand('/home/itzko/.local/share/nvim/mason/bin/jdtls') },
-  on_attach = on_attach,
-  capabilities = capabilities,
-  filetypes = { "java" },
-  root_dir = lspconfig.util.root_pattern("gradlew", "mvnw", ".git"),
-})
-
-lspconfig.tsserver.setup({
-  on_attach = on_attach,
-  capabilities = capabilities,
-  init_options = {
-    preferences = {
-      disableSuggestions = true,
-    }
-  },
-  root_dir = lspconfig.util.root_pattern(".git"),
-})
-
 if not configs.golangcilsp then
  	configs.golangcilsp = {
 		default_config = {
@@ -64,3 +45,9 @@ lspconfig.html.setup {
 	filetypes = {'html'},
   root_dir = lspconfig.util.root_pattern('.git'),
 }
+
+lspconfig.pyright.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+	filetypes = {'python'},
+})
