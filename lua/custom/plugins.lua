@@ -18,6 +18,7 @@ local plugins = {
         "pyright",
         "ruff",
         "mypy",
+        "typescript-language-server",
         "black",
       },
     },

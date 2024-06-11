@@ -52,3 +52,15 @@ lspconfig.pyright.setup({
 	filetypes = {'python'},
   root_dir = lspconfig.util.root_pattern('.git'),
 })
+
+lspconfig.tsserver.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+  init_options = {
+    preferences = {
+      disableSuggestions = true,
+    }
+  },
+  root_dir = lspconfig.util.root_pattern(".git"),
+})
+
